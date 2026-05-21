@@ -1,1 +1,66 @@
+1. Introducción
+Para el desarrollo de la plataforma Lucía OS, el equipo utilizó un enfoque de co-programación asistida por Inteligencia Artificial, utilizando tres herramientas clave en distintas etapas del ciclo de vida del proyecto: NotebookLM (descubrimiento de requerimientos), Stitch (diseño y flujos del prototipo) y Gemini / AI Studio (asistencia en código React y lógicas de negocio). Como estudiantes de Ingeniería Comercial, las instrucciones se enfocaron en resolver las ineficiencias financieras y operativas del Caso 04.
+
+2. Fase de Descubrimiento y Requerimientos (NotebookLM)
+
+Objetivo: Analizar el documento base del Caso 04 para extraer de forma automática los dolores reales de la diseñadora y definir el alcance del sistema.
+Prompt Utilizado:
+"Actúa como un consultor de negocios e identifica cuáles son los dolores operativos más grandes de Lucía en el Caso 04, en qué herramientas tiene duplicidad de datos y por qué está sufriendo fugas de ingresos o puntos ciegos en su capital de trabajo. Con base en eso, ayúdanos a redactar la lista de requerimientos del sistema."
+
+
+3. Fase de Prototipado y Diseño de Interfaz (Stitch)
+En esta etapa se diseñó la maqueta visual e interactiva de alta fidelidad, dividiendo el desarrollo en tres enfoques críticos para solucionar el desorden de Lucía:
+
+🔹 Hito 1: Creación de la Fuente Única de Verdad (Dashboard)
+Prompt de Diseño en Stitch:
+
+"Diseña un ecosistema para una diseñadora freelance. El sistema debe centralizar la gestión de clientes (fijos y esporádicos), proyectos y finanzas en una sola base de datos. Crea un Dashboard Financiero centrado en la liquidez que visualice montos 'Facturados este mes' vs 'Por Cobrar', e incluya una alerta crítica para deudas con más de 30 días de antigüedad, como el caso de la deuda de enero olvidada. Utiliza un estilo visual profesional, limpio y corporativo."
+
+🔹 Hito 2: Automatización Operativa y Tracking de Tiempos
+Prompt de Diseño en Stitch:
+
+"Implementa un módulo de Gestión de Clientes que unifique toda la cartera. Cada cliente debe tener asignada su lógica de cobro específica (suscripción, hora, proyecto). Diseña una función de Cronómetro de Alta Precisión vinculado automáticamente a un cliente y proyecto. El sistema debe ser capaz de cruzar estas horas con los ingresos para calcular la Tarifa Efectiva Real, disparando alertas si la rentabilidad cae. Incluye una vista de historial centralizada."
+
+🔹 Hito 3: Transparencia y Cobro Proactivo (Portal del Cliente)
+Prompt de Diseño en Stitch:
+
+"Diseña un Portal de Autogestión para el Cliente que elimine la fricción en los cobros mediante la transparencia. El cliente debe poder ver en tiempo real el progreso porcentual de su proyecto, un desglose detallado de las horas consumidas y sus facturas pendientes. Implementa un flujo de Conciliación Automática: el cliente debe tener un botón de 'Pagar Ahora' que, al activarse, actualice instantáneamente el estado a 'Pagado' en el panel de Lucía y genere un reporte PDF."
+
+
+4. Fase de Desarrollo Asistido por IA e Iteraciones (Gemini / AI Studio)
+Objetivo: Traducir los flujos visuales de Stitch a código funcional de React, resolviendo los errores técnicos de visualización y adaptando el código para su ejecución final.
+
+🔹 Iteración 1: Construcción del Dashboard y Gráficos en React
+Prompt Utilizado:
+
+"Necesito pasar el prototipo a una aplicación. Crea una estructura en React para la aplicación 'Lucía OS'. Incluye el menú lateral de navegación, tarjetas de KPI financieros y un gráfico de área interactivo usando la librería Recharts para analizar sus ingresos del primer semestre, usando Tailwind CSS."
+
+🔹 Iteración 2: Optimización de la Interfaz para Celulares (Corrección de Errores)
+El problema: Inicialmente, los gráficos y las tablas se cortaban o superponían al achicar la pantalla del navegador, lo que rompía la experiencia móvil.
+
+Prompt de Corrección:
+
+"El código que me diste se corta cuando lo abro en la pantalla del celular. El gráfico se ve gigante y el menú lateral tapa las cosas. Ayúdame a arreglar el App.tsx usando clases responsivas de Tailwind CSS para que el diseño sea Mobile-First (que las tarjetas y tablas se apilen verticalmente de forma ordenada)."
+
+🔹 Iteración 3: Sincronización Automática del Pago del Cliente
+El problema: Necesitábamos que la acción de pago del cliente afectara el panel del administrador sin procesos manuales intermedios.
+
+Prompt de Lógica de Negocio:
+
+"Agrega dentro del mismo App.tsx una pestaña extra que simule el 'Portal Cliente' (para Alpha Corp). Debe mostrar su barra de progreso y un botón de 'Pagar Ahora'. Necesito que al hacer clic, cargue por 2 segundos simulando la pasarela de Webpay, y automáticamente actualice el estado de su factura a 'Pagada' en color verde en el historial de administración, dispare una alerta flotante (Toast) e incremente el contador de la campana de notificaciones."
+
+5. Conclusiones del Equipo
+El uso estratégico de herramientas de IA nos permitió actuar como verdaderos consultores tecnológicos. No se trató de copiar código a la primera, sino de guiar a las distintas inteligencias artificiales con instrucciones claras basadas en problemas de negocio. Esto nos permitió pasar de un caso en papel a una aplicación responsiva y automatizada en un tiempo récord.
+
+
+
+
+
+
+
+
+
+
+
+
 
