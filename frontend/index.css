@@ -39,6 +39,22 @@
   --radius-lg: 0.5rem;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+  --color-background: #020617; /* Slate 950 */
+  --color-surface: #0f172a; /* Slate 900 */
+  --color-surface-container: #1e293b; /* Slate 800 */
+  --color-surface-container-low: #0f172a;
+  --color-surface-container-high: #334155; /* Slate 700 */
+  --color-on-background: #f8fafc; /* Slate 50 */
+  --color-on-surface: #f1f5f9; /* Slate 100 */
+  --color-on-surface-variant: #94a3b8; /* Slate 400 */
+  --color-outline-variant: #1e293b;
+  --color-primary-fixed: #1e1b4b; /* Indigo 900 */
+  --color-on-primary-fixed: #e0e7ff; /* Indigo 100 */
+}
+
 @layer base {
   body {
     @apply bg-background text-on-background font-sans antialiased;
