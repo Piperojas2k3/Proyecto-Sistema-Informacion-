@@ -1,11 +1,14 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap');
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Manrope", sans-serif;
 
-  --color-primary: #4f46e5; /* Indigo 600 */
+  --color-primary: #6366f1; /* Indigo */
+  --color-primary-fixed: #e0e7ff;
+  --color-on-primary-fixed: #312e81;
+
   --color-secondary: #0ea5e9; /* Sky 500 */
   --color-error: #e11d48; /* Rose 600 */
   --color-background: #f8fafc; /* Slate 50 */
@@ -28,8 +31,6 @@
   
   --color-secondary-container: #e0f2fe;
   --color-error-container: #fff1f2;
-  --color-primary-fixed: #e0e7ff; /* Indigo 100 */
-  --color-on-primary-fixed: #312e81; /* Indigo 900 */
   
   --color-outline: #94a3b8; /* Slate 400 */
   --color-outline-variant: #e2e8f0; /* Slate 200 */
@@ -41,6 +42,104 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@layer base {
+  /* Emerald */
+  .theme-emerald {
+    --color-primary: #10b981;
+    --color-primary-fixed: #d1fae5;
+    --color-on-primary-fixed: #064e3b;
+
+    --color-background: #f2fbf5;
+    --color-surface: #ffffff;
+    --color-surface-container: #e6f7ec;
+    --color-surface-container-low: #f2fbf5;
+    --color-surface-container-high: #ccefe0;
+    --color-on-background: #012117;
+    --color-on-surface: #023323;
+    --color-on-surface-variant: #0c6046;
+    --color-outline-variant: #e6f7ec;
+  }
+  .theme-emerald.dark, .dark .theme-emerald {
+    --color-primary: #10b981;
+    --color-primary-fixed: #022c22;
+    --color-on-primary-fixed: #d1fae5;
+
+    --color-background: #011710;
+    --color-surface: #032d20;
+    --color-surface-container: #054432;
+    --color-surface-container-low: #011710;
+    --color-surface-container-high: #0b664b;
+    --color-on-background: #e6f7ec;
+    --color-on-surface: #ccefe0;
+    --color-on-surface-variant: #84d6b6;
+    --color-outline-variant: #054432;
+  }
+
+  /* Rose */
+  .theme-rose {
+    --color-primary: #f43f5e;
+    --color-primary-fixed: #ffe4e6;
+    --color-on-primary-fixed: #881337;
+
+    --color-background: #fdf2f4;
+    --color-surface: #ffffff;
+    --color-surface-container: #fbe6eb;
+    --color-surface-container-low: #fdf2f4;
+    --color-surface-container-high: #f7ced8;
+    --color-on-background: #2c0312;
+    --color-on-surface: #48051d;
+    --color-on-surface-variant: #901742;
+    --color-outline-variant: #fbe6eb;
+  }
+  .theme-rose.dark, .dark .theme-rose {
+    --color-primary: #f43f5e;
+    --color-primary-fixed: #4c0519;
+    --color-on-primary-fixed: #ffe4e6;
+
+    --color-background: #1a020a;
+    --color-surface: #310715;
+    --color-surface-container: #480b20;
+    --color-surface-container-low: #1a020a;
+    --color-surface-container-high: #6c1331;
+    --color-on-background: #fbe6eb;
+    --color-on-surface: #f7ced8;
+    --color-on-surface-variant: #f09eb6;
+    --color-outline-variant: #480b20;
+  }
+
+  /* Violet */
+  .theme-violet {
+    --color-primary: #8b5cf6;
+    --color-primary-fixed: #ede9fe;
+    --color-on-primary-fixed: #4c1d95;
+
+    --color-background: #f6f4fe;
+    --color-surface: #ffffff;
+    --color-surface-container: #efebfd;
+    --color-surface-container-low: #f6f4fe;
+    --color-surface-container-high: #ddd3fa;
+    --color-on-background: #190a38;
+    --color-on-surface: #2c1261;
+    --color-on-surface-variant: #5a22a3;
+    --color-outline-variant: #efebfd;
+  }
+  .theme-violet.dark, .dark .theme-violet {
+    --color-primary: #8b5cf6;
+    --color-primary-fixed: #2e1065;
+    --color-on-primary-fixed: #ede9fe;
+
+    --color-background: #0d051c;
+    --color-surface: #1c0b3b;
+    --color-surface-container: #2b115a;
+    --color-surface-container-low: #0d051c;
+    --color-surface-container-high: #441e8c;
+    --color-on-background: #efebfd;
+    --color-on-surface: #ddd3fa;
+    --color-on-surface-variant: #bca8f5;
+    --color-outline-variant: #2b115a;
+  }
+}
+
 .dark {
   --color-background: #020617; /* Slate 950 */
   --color-surface: #0f172a; /* Slate 900 */
@@ -51,8 +150,6 @@
   --color-on-surface: #f1f5f9; /* Slate 100 */
   --color-on-surface-variant: #94a3b8; /* Slate 400 */
   --color-outline-variant: #1e293b;
-  --color-primary-fixed: #1e1b4b; /* Indigo 900 */
-  --color-on-primary-fixed: #e0e7ff; /* Indigo 100 */
 }
 
 @layer base {
