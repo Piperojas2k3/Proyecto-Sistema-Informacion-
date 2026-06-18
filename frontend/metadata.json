@@ -1,6 +1,6 @@
 {
-  "name": "Lucía Business Dashboard",
+  "name": "LuciApp",
   "description": "A polished business dashboard for managing invoices, tracking work hours, and monitoring client activity.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
