@@ -1,20 +1,3 @@
-/LuciApp-Proyecto
-├── /db
-│   └── schema.sql           # Tu script SQL completo (DDL y DML)
-├── /backend
-│   └── server.ts            # Aquí mueves el server.ts (el que usa PostgreSQL)
-├── /docs
-│   ├── Bitácora de Prompts.pdf
-│   ├── Informe Ejecutivo-Caso 04.pdf
-│   ├── Link_App.txt         # Opcional: enlace a Stitch
-│   └── Prototipo.txt        # Opcional: enlace a Prototipo
-├── /frontend
-│   ├── /src                 # Código del Frontend (Componentes React, utilidades, hooks, estilos)
-│   ├── index.html
-│   ├── package.json         # Dependencias y scripts del proyecto integrados
-│   ├── tsconfig.json        # Configuración de TypeScript
-│   ├── vite.config.ts       # Configuración de Vite
-└── └── .env.example
 
 # Proyecto Full-Stack (React + Express)
 
